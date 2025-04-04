@@ -128,6 +128,23 @@ message: "server error"
 }
 })
 
+//update
+
+app.put("/user/user_id", async(req, res)=>{
+try {
+const userId = parseInt(req.params.user_id);
+const {username} = req.body;
+const updateUser = await prisma.user.update({
+where: {id:userId},
+data:{
+username:username
+}
+})
+} catch (error) {
+    
+}
+})
+
 // 404 Middleware - Handles undefined routes
 app.use((req, res) => {
     res.status(404).json({ message: "Route not found" });
