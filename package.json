@@ -6,15 +6,26 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "prisma migrate dave",
+    "generate": "prisma generate",
+    "prisma :format": "prisma format",
+    "prisma:studio": "prisma studio",
+    "prisma:pull": "prisma db pull",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:reset": "prisma migrate reset",
+    "prisma:db-push": "prisma db push"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^6.5.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "js": "^0.1.0",
     "mongoose": "^8.13.1",
     "morgan": "^1.10.0",
     "prisma": "^6.5.0"
